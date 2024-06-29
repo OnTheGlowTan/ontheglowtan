@@ -23,7 +23,6 @@ header {
     z-index: 1000;
 }
 
-/* Add the following CSS rule to resize the logo */
 header .logo {
     max-width: 150px;
     height: auto;
@@ -193,63 +192,6 @@ input.error, select.error, textarea.error {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .service-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-item {
-        width: 80%;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5em;
-    }
-
-    .hero-content p {
-        font-size: 1em;
-    }
-
-    footer {
-        position: relative;
-    }
-}
-
-/* Base styles for larger screens */
-body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-.logo {
-    max-width: 150px;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-/* Styles for smaller screens */
-@media screen and (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: flex-start;
@@ -278,13 +220,12 @@ nav ul li a {
     }
 
     .service-list {
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .service-item {
-        width: 100%;
+        width: 80%;
         margin-bottom: 20px;
     }
 
@@ -306,7 +247,7 @@ nav ul li a {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
     .hero-content h1 {
         font-size: 1.5em;
     }
