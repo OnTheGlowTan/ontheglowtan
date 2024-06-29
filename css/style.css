@@ -12,7 +12,7 @@ body {
 
 /* Header */
 header {
-    background: url('/images/tan.jpg') no-repeat center center/cover;
+    background-color: #b58859; /* Light brown color for header */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 20px;
     position: sticky;
@@ -53,6 +53,8 @@ nav a:hover {
     color: #ffffff; /* Change text color to white for contrast */
     text-align: center;
     padding: 100px 20px; /* Reduced padding for smaller screens */
+    background-size: cover; /* Ensure the image covers the hero section properly */
+    background-position: center; /* Center the image */
 }
 
 .hero-content {
