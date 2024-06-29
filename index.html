@@ -3,118 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="On The Glow Tan - Organic Mobile Spray Tanning Service">
-    <meta name="keywords" content="spray tan, mobile tanning, organic tan, On The Glow Tan">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <title>On The Glow Tan</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <img src="images/logo.jpg" alt="On The Glow Tan Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#book">Book</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Header -->
+    <header class="container-fluid bg-white shadow-sm sticky-top">
+        <div class="row align-items-center py-2">
+            <div class="col-md-2 col-6">
+                <img src="images/logo.jpg" alt="On The Glow Tan" class="img-fluid">
+            </div>
+            <nav class="col-md-10 col-6 text-end">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#booking">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to On The Glow Tan</h1>
-            <p>Your organic mobile spray tanning service.</p>
-            <a href="#book" class="button">Book Appointment</a>
-        </div>
-    </section>
-    
-    <section id="intro" class="intro">
-        <h2>About Us</h2>
-        <p>At On The Glow Tan, our mission is to provide a natural, healthy, organic glow that boosts your confidence. Enjoy a relaxing, pampered atmosphere while receiving your spray tan.</p>
-    </section>
 
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="service-list">
-            <div class="service-item">
-                <img src="images/spraytan.jpg" alt="Organic Spray Tan">
-                <h3>Organic Spray Tan</h3>
-                <p>$50 - A quick and easy organic tan that gives you a natural glow.</p>
-                <a href="#book" class="button">Book Now</a>
-            </div>
-            <div class="service-item">
-                <img src="images/rapid.jpg" alt="Deluxe Rapid Tan">
-                <h3>Deluxe Rapid Tan</h3>
-                <p>$75 - Includes exfoliation and moisturizing for a longer-lasting rapid tan.</p>
-                <a href="#book" class="button">Book Now</a>
-            </div>
-            <div class="service-item">
-                <img src="images/party.jpg" alt="Group Spray Tan Party">
-                <h3>Group Spray Tan Party</h3>
-                <p>$40 per person - Perfect for parties! Minimum 4 people.</p>
-                <a href="#book" class="button">Book Now</a>
-            </div>
-            <div class="service-item">
-                <img src="images/Wedding.jpg" alt="Wedding Party">
-                <h3>Wedding Party</h3>
-                <p>$200 - Special package for wedding parties. Perfect for a glowing bridal party.</p>
-                <a href="#book" class="button">Book Now</a>
-            </div>
-            <div class="service-item">
-                <img src="images/Wedding.jpg" alt="Membership">
-                <h3>Membership</h3>
-                <p>$150/month - Includes 4 organic spray tans per month.</p>
-                <a href="#membership" class="button">Coming Soon</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero text-center text-white d-flex align-items-center justify-content-center" style="background: url('images/hero-bg.jpg') no-repeat center center/cover;">
+        <div class="container">
+            <div class="hero-content p-4 rounded" style="background: rgba(0, 0, 0, 0.5);">
+                <h1 class="display-4">Get Your Glow On</h1>
+                <p class="lead">Experience the best organic spray tan in town.</p>
+                <a href="#booking" class="btn btn-primary">Book Appointment</a>
             </div>
         </div>
     </section>
 
-    <section id="book" class="booking">
-        <h2>Book an Appointment</h2>
-        <!-- Calendly inline widget begin -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/meg-lutey/organic-spray-tan" style="min-width:320px;height:630px;"></div>
-        <div class="calendly-inline-widget" data-url="https://calendly.com/meg-lutey/deluxe-rapid-tan" style="min-width:320px;height:630px;"></div>
-        <div class="calendly-inline-widget" data-url="https://calendly.com/meg-lutey/group-spray-tan-party" style="min-width:320px;height:630px;"></div>
-        <div class="calendly-inline-widget" data-url="https://calendly.com/meg-lutey/wedding-and-bridal-party-consultation" style="min-width:320px;height:630px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        <!-- Calendly inline widget end -->
+    <!-- Intro Section -->
+    <section id="intro" class="intro py-5">
+        <div class="container">
+            <h2 class="mb-4">Welcome to On The Glow Tan</h2>
+            <p>Our mission is to provide you with a flawless, natural-looking tan using only organic and safe products.</p>
+        </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
-            <label for="contact-name">Name:</label>
-            <input type="text" id="contact-name" name="name" required>
-            
-            <label for="contact-email">Email:</label>
-            <input type="email" id="contact-email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            
-            <button type="submit">Send</button>
-        </form>
-        <div class="contact-details">
-            <p>Phone: 215-880-3494</p>
-            <p>Email: contact.ontheglowtan@gmail.com</p>
-            <p>Follow us on social media:</p>
+    <!-- Services Section -->
+    <section id="services" class="services py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-4">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="service-item p-3 bg-white rounded shadow-sm">
+                        <img src="images/spraytan.jpg" alt="Organic Spray Tan" class="img-fluid rounded-top">
+                        <h3 class="mt-3">Organic Spray Tan</h3>
+                        <p>Our organic spray tan provides a beautiful, natural-looking glow.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-item p-3 bg-white rounded shadow-sm">
+                        <img src="images/rapid.jpg" alt="Deluxe Rapid Tan" class="img-fluid rounded-top">
+                        <h3 class="mt-3">Deluxe Rapid Tan</h3>
+                        <p>A quick-drying tan that allows you to shower in as little as an hour.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-item p-3 bg-white rounded shadow-sm">
+                        <img src="images/party.jpg" alt="Group Spray Tan Party" class="img-fluid rounded-top">
+                        <h3 class="mt-3">Group Spray Tan Party</h3>
+                        <p>Enjoy a fun spray tan party with friends. $40 per person, minimum 4 people.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-item p-3 bg-white rounded shadow-sm">
+                        <img src="images/Wedding.jpg" alt="Wedding Party Tan" class="img-fluid rounded-top">
+                        <h3 class="mt-3">Wedding and Bridal Party</h3>
+                        <p>Perfect for your special day. Pricing available upon consultation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking py-5">
+        <div class="container">
+            <h2 class="mb-4">Book Your Appointment</h2>
+            <form id="booking-form" class="needs-validation" novalidate>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                        <div class="invalid-feedback">
+                            Please enter your name.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address.
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="service" class="form-label">Service</label>
+                        <select id="service" class="form-select" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option>Organic Spray Tan</option>
+                            <option>Deluxe Rapid Tan</option>
+                            <option>Group Spray Tan Party</option>
+                            <option>Wedding and Bridal Party</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a service.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="date" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="date" required>
+                        <div class="invalid-feedback">
+                            Please select a date.
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="time" class="form-label">Time</label>
+                        <input type="time" class="form-control" id="time" required>
+                        <div class="invalid-feedback">
+                            Please select a time.
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-4">Contact Us</h2>
+            <form id="contact-form" class="needs-validation" novalidate>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="contact-name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="contact-name" required>
+                        <div class="invalid-feedback">
+                            Please enter your name.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="contact-email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="contact-email" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address.
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" class="form-control" rows="4" required></textarea>
+                    <div class="invalid-feedback">
+                        Please enter your message.
+                    </textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4 bg-dark text-white text-center">
+        <div class="container">
+            <p>&copy; 2024 On The Glow Tan. All rights reserved.</p>
             <div class="social-media">
-                <a href="https://www.instagram.com/ontheglowtan_/?igsh=MW4ybDY2MzQ2d2RzZA%3D%3D" target="_blank">
-                    <img src="images/insta.jpg" alt="Instagram">
+                <a href="https://www.instagram.com/ontheglowtan_/?igshid=MW4ybDY2MzQ2d2RzZA%3D%3D" target="_blank">
+                    <img src="images/instag.jpg" alt="Instagram">
                 </a>
             </div>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 On The Glow Tan. All rights reserved.</p>
-        <p class="cancellation-policy">
-            Cancellation Policy: There is a 48-hour cancellation policy. If you cancel with less than 48 hours' notice, you will be charged 50%. If you cancel with less than 24 hours' notice, you will be charged 100%.
-        </p>
     </footer>
-    
+
+    <!-- Bootstrap --> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
 </html>
+    
