@@ -1,0 +1,243 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d4a373; /* Matching the book appointment button color */
+    color: #5a3e36; /* Dark brown text color */
+}
+
+/* Header */
+header {
+    background-color: #ffffff; /* White background for header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    max-width: 100px; /* Adjusted logo size for smaller screens */
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5a3e36; /* Dark brown color for nav links */
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff; /* White color for hover state */
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/tan.webp') no-repeat center center/cover;
+    color: #000000; /* Change text color to black or another color that contrasts well with the background */
+    text-align: center;
+    padding: 100px 20px; /* Reduced padding for smaller screens */
+}
+
+.hero-content {
+    background: rgba(255, 255, 255, 0.8); /* Lighten background for better readability */
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    margin: 0;
+    font-size: 2.5em; /* Adjusted font size for smaller screens */
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-content p {
+    font-size: 1em; /* Adjusted font size for smaller screens */
+}
+
+.button {
+    background-color: #d4a373; /* Matching the book appointment button color */
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #b58859; /* Darker gold for hover state */
+    transform: scale(1.05);
+}
+
+/* Section Styles */
+.intro, .services, .booking, .contact {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.intro h2, .services h2, .booking h2, .contact h2 {
+    font-family: 'Playfair Display', serif;
+    color: #d4a373; /* Gold color for section headings */
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service-item img {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.service-item h3 {
+    margin-top: 0;
+    color: #d4a373; /* Gold color for service item titles */
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-media a:hover img {
+    transform: scale(1.2);
+}
+
+/* Footer */
+.footer {
+    background-color: #5a3e36; /* Dark brown background for footer */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Error Feedback */
+input.error, select.error, textarea.error {
+    border: 2px solid red;
+}
+
+/* Alert Messages */
+.alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    z-index: 1000;
+    font-size: 1em;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s;
+}
+
+.alert.success {
+    background-color: #4CAF50;
+}
+
+.alert.error {
+    background-color: #f44336;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .logo {
+        max-width: 80px; /* Smaller logo for mobile screens */
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .booking {
+        padding: 20px;
+    }
+
+    .testimonial-item {
+        padding: 20px;
+    }
+
+    .contact-details {
+        padding: 20px;
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5em;
+    }
+
+    .service-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .button {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
