@@ -50,13 +50,13 @@ nav a:hover {
 /* Hero Section */
 .hero {
     background: url('images/tan.webp') no-repeat center center/cover;
-    color: #000000; /* Change text color to black or another color that contrasts well with the background */
+    color: #ffffff; /* Change text color to white for contrast */
     text-align: center;
     padding: 100px 20px; /* Reduced padding for smaller screens */
 }
 
 .hero-content {
-    background: rgba(255, 255, 255, 0.8); /* Lighten background for better readability */
+    background: rgba(0, 0, 0, 0.5); /* Add a darker background to improve text readability */
     display: inline-block;
     padding: 20px;
     border-radius: 10px;
