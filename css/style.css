@@ -14,15 +14,41 @@ body {
 header {
     background-color: #ffffff; /* White background for header */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
+/* Add the following CSS rule to resize the logo */
 header .logo {
-    max-width: 150px; /* Adjust this value as needed */
+    max-width: 150px;
     height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5a3e36; /* Dark brown color for nav links */
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff; /* White color for hover state */
 }
 
 /* Hero Section */
@@ -106,4 +132,86 @@ header .logo {
 
 .service-item h3 {
     margin-top: 0;
-    color: #d4a373; /* Gold color for
+    color: #d4a373; /* Gold color for service item titles */
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-media a:hover img {
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    background-color: #5a3e36; /* Dark brown background for footer */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Error Feedback */
+input.error, select.error, textarea.error {
+    border: 2px solid red;
+}
+
+/* Alert Messages */
+.alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    z-index: 1000;
+    font-size: 1em;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s;
+}
+
+.alert.success {
+    background-color: #4CAF50;
+}
+
+.alert.error {
+    background-color: #f44336;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    footer {
+        position: relative;
+    }
+}
+
