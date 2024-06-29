@@ -273,3 +273,76 @@ input.error, select.error, textarea.error {
         font-size: 0.9em;
     }
 }
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-logo {
+        margin-bottom: 10px;
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .booking {
+        padding: 20px;
+    }
+
+    .testimonial-item {
+        padding: 20px;
+    }
+
+    .contact-details {
+        padding: 20px;
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5em;
+    }
+
+    .service-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .button {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .header-logo {
+        font-size: 18px; /* Further adjustment for very small screens */
+    }
+}
