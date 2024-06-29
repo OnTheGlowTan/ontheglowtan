@@ -15,7 +15,7 @@ header {
     background-color: #b58859; /* Light brown color for header */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 20px;
-    position: sticky;
+    position: relative; /* Change from sticky to relative */
     top: 0;
     z-index: 1000;
     display: flex;
