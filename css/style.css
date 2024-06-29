@@ -14,18 +14,14 @@ body {
 header {
     background-color: #ffffff; /* White background for header */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-/* Add the following CSS rule to resize the logo */
 header .logo {
-    max-width: 150px;
+    max-width: 100px; /* Adjusted logo size for smaller screens */
     height: auto;
 }
 
@@ -56,7 +52,7 @@ nav a:hover {
     background: url('../images/hero-bg.jpg') no-repeat center center/cover;
     color: #ffffff;
     text-align: center;
-    padding: 150px 20px;
+    padding: 100px 20px; /* Reduced padding for smaller screens */
 }
 
 .hero-content {
@@ -68,12 +64,12 @@ nav a:hover {
 
 .hero-content h1 {
     margin: 0;
-    font-size: 3em;
+    font-size: 2.5em; /* Adjusted font size for smaller screens */
     font-family: 'Playfair Display', serif;
 }
 
 .hero-content p {
-    font-size: 1.2em;
+    font-size: 1em; /* Adjusted font size for smaller screens */
 }
 
 .button {
@@ -151,14 +147,14 @@ nav a:hover {
 }
 
 /* Footer */
-footer {
+.footer {
     background-color: #5a3e36; /* Dark brown background for footer */
     color: #ffffff;
     padding: 20px;
     text-align: center;
 }
 
-footer p {
+.footer p {
     margin: 0;
 }
 
@@ -193,6 +189,15 @@ input.error, select.error, textarea.error {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    header .logo {
+        max-width: 80px; /* Smaller logo for mobile screens */
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 20px;
+    }
+
     .service-list {
         flex-direction: column;
         align-items: center;
@@ -200,17 +205,39 @@ input.error, select.error, textarea.error {
 
     .service-item {
         width: 80%;
+        margin-bottom: 20px;
     }
 
+    .booking {
+        padding: 20px;
+    }
+
+    .testimonial-item {
+        padding: 20px;
+    }
+
+    .contact-details {
+        padding: 20px;
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
     .hero-content h1 {
-        font-size: 2.5em;
+        font-size: 1.5em;
     }
 
-    .hero-content p {
-        font-size: 1em;
+    .service-item img {
+        width: 100%;
+        height: auto;
     }
 
-    footer {
-        position: relative;
+    .button {
+        padding: 10px;
+        font-size: 0.9em;
     }
 }
