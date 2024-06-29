@@ -12,7 +12,7 @@ body {
 
 /* Header */
 header {
-    background-color: #ffffff; /* White background for header */
+    background: url('images/tan.jpg') no-repeat center center/cover;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 20px;
     position: sticky;
@@ -49,7 +49,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    background: url('images/tan.jpeg') no-repeat center center/cover;
+    background: url('images/tan.jpg') no-repeat center center/cover;
     color: #ffffff; /* Change text color to white for contrast */
     text-align: center;
     padding: 100px 20px; /* Reduced padding for smaller screens */
