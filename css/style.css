@@ -292,6 +292,7 @@ input.error, select.error, textarea.error {
         font-size: 16px; /* Further adjustment for very small screens */
     }
 }
+
 /* Contact Section */
 .contact {
     background-color: #f9f9f9;
