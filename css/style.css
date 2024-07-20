@@ -1,242 +1,294 @@
-/* General Styles */
-body, html {
-    margin: 0;
-    padding: 0;
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap');
+
+/* Global Styles */
+body {
     font-family: 'Open Sans', sans-serif;
-}
-
-header {
-    position: fixed;
-    width: 100%;
-    background-color: #ffe4b3; /* Make the header background transparent */
-    z-index: 1000;
-}
-
-header .logo {
-    float: left;
-    padding: 10px;
-}
-
-header nav {
-    float: right;
-}
-
-header nav ul {
-    list-style: none;
     margin: 0;
     padding: 0;
+    background-color: #ffe4b3; /* Matching the book appointment button color */
+    color: #5a3e36; /* Dark brown text color */
+}
+
+/* Header */
+header {
+    background-color: #ffe4b3; /* Light brown color for header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    position: relative; /* Change from sticky to relative */
+    top: 0;
+    z-index: 1000;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    height: 100%;
 }
 
-header nav ul li {
-    margin: 0 10px;
+.header-logo {
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
 }
 
-header nav ul li a {
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
     text-decoration: none;
-    color: white; /* Change the font color to white for better visibility */
+    color: #5a3e36; /* Dark brown color for nav links */
     font-weight: 600;
+    transition: color 0.3s;
 }
 
-header nav ul li a:hover {
-    color: #f0c14b; /* Add a hover effect to the links for better user experience */
+nav a:hover {
+    color: #ffffff; /* White color for hover state */
 }
 
 /* Hero Section */
 .hero {
-    position: relative;
-    height: 100vh;
-    background: url('images/your-hero-image.jpg') no-repeat center center/cover; /* Ensure the background image covers the hero section */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: url('/images/tan.webp') no-repeat center center/cover;
+    color: #ffffff; /* Change text color to white for contrast */
     text-align: center;
-    color: white;
+    padding: 100px 20px; /* Reduced padding for smaller screens */
+    background-size: cover; /* Ensure the image covers the hero section properly */
+    background-position: center; /* Center the image */
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Add a gradient overlay for better text readability */
+    z-index: 1;
 }
 
 .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero h1 {
-    font-size: 3em;
-    margin: 0.5em 0;
-}
-
-.hero p {
-    font-size: 1.5em;
-    margin: 0.5em 0 1em;
-}
-
-.hero .button {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5); /* Add a darker background to improve text readability */
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #f0c14b;
-    color: #000;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 5px;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-.hero .button:hover {
-    background-color: #e6b31e;
+.hero-content h1 {
+    margin: 0;
+    font-size: 2.5em; /* Adjusted font size for smaller screens */
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-content p {
+    font-size: 1em; /* Adjusted font size for smaller screens */
+}
+
+.button {
+    background-color: #d4a373; /* Matching the book appointment button color */
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #b58859; /* Darker gold for hover state */
+    transform: scale(1.05);
 }
 
 /* Section Styles */
-section {
-    padding: 60px 20px;
-}
-
-.intro {
+.intro, .services, .booking, .contact {
+    padding: 50px 20px;
+    background-color: #ffffff;
     text-align: center;
-    background-color: #f9f9f9;
 }
 
-.services {
-    background-color: #fff;
-}
-
-.services h2,
-.contact h2 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 20px;
+.intro h2, .services h2, .booking h2, .contact h2 {
+    font-family: 'Playfair Display', serif;
+    color: #d4a373; /* Gold color for section headings */
 }
 
 .service-list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .service-item {
-    width: 300px;
-    margin: 20px;
+    background-color: #ffffff;
     padding: 20px;
-    background-color: #f9f9f9;
+    margin: 10px;
     border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .service-item img {
     max-width: 100%;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
 }
 
 .service-item h3 {
-    font-size: 1.8em;
-    margin: 20px 0 10px;
+    margin-top: 0;
+    color: #d4a373; /* Gold color for service item titles */
 }
 
-.service-item p {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-.service-item .button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #f0c14b;
-    color: #000;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 5px;
+.social-media a {
+    margin: 0 10px;
     display: inline-block;
 }
 
-.service-item .button:hover {
-    background-color: #e6b31e;
-}
-
-/* Contact Section */
-.contact {
-    background-color: #f9f9f9;
-}
-
-.contact form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.contact form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-
-.contact form input,
-.contact form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-.contact form button {
-    padding: 10px 20px;
-    background-color: #f0c14b;
-    color: #000;
-    border: none;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact form button:hover {
-    background-color: #e6b31e;
-}
-
-.contact-details {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.contact-details p {
-    margin: 5px 0;
-}
-
-.contact-details .social-media img {
+.social-media img {
     width: 30px;
-    margin: 0 10px;
+    height: 30px;
+    transition: transform 0.3s;
 }
 
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: white;
+.social-media a:hover img {
+    transform: scale(1.2);
+}
+
+/* Footer */
+.footer {
+    background-color: #5a3e36; /* Dark brown background for footer */
+    color: #ffffff;
+    padding: 20px;
     text-align: center;
-    padding: 20px 0;
 }
 
-footer p {
-    margin: 5px 0;
+.footer p {
+    margin: 0;
 }
 
-.cancellation-policy {
-    font-size: 0.9em;
-    margin-top: 10px;
-    color: #ddd;
+/* Error Feedback */
+input.error, select.error, textarea.error {
+    border: 2px solid red;
+}
+
+/* Alert Messages */
+.alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    z-index: 1000;
+    font-size: 1em;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s;
+}
+
+.alert.success {
+    background-color: #4CAF50;
+}
+
+.alert.error {
+    background-color: #f44336;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header nav ul {
+    header {
         flex-direction: column;
+        align-items: center;
     }
 
-    header nav ul li {
-        margin: 5px 0;
+    .header-logo {
+        margin-bottom: 10px;
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 20px;
     }
 
     .service-list {
         flex-direction: column;
         align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .booking {
+        padding: 20px;
+    }
+
+    .testimonial-item {
+        padding: 20px;
+    }
+
+    .contact-details {
+        padding: 20px;
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5em;
+    }
+
+    .service-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .button {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .header-logo {
+        font-size: 16px; /* Further adjustment for very small screens */
     }
 }
