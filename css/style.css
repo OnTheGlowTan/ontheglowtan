@@ -8,7 +8,6 @@ body {
     padding: 0;
     background-color: #ffe4b3; /* Matching the book appointment button color */
     color: #5a3e36; /* Dark brown text color */
-    scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 /* Header */
@@ -73,7 +72,6 @@ nav a:hover {
     background-size: cover; /* Ensure the image covers the hero section properly */
     background-position: center; /* Center the image */
     position: relative;
-    height: 100vh; /* Full viewport height */
 }
 
 .hero::before {
@@ -126,10 +124,6 @@ nav a:hover {
     padding: 50px 20px;
     background-color: #ffffff;
     text-align: center;
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .intro h2, .services h2, .booking h2, .contact h2 {
@@ -141,9 +135,6 @@ nav a:hover {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    flex-direction: column; /* Column direction for mobile */
-    align-items: center;
-    height: 100vh; /* Full viewport height */
 }
 
 .service-item {
@@ -151,14 +142,10 @@ nav a:hover {
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
-    width: 90%; /* Full width for mobile */
+    width: 30%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;
     transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh; /* Full viewport height */
 }
 
 .service-item:hover {
@@ -340,7 +327,7 @@ input.error, select.error, textarea.error {
     }
 
     .service-item {
-        width: 100%;
+        width: 80%;
         margin-bottom: 20px;
     }
 
@@ -379,38 +366,5 @@ input.error, select.error, textarea.error {
 
     .header-logo {
         font-size: 16px; /* Further adjustment for very small screens */
-    }
-}
-
-@media (max-width: 480px) {
-    /* Each section will take the full viewport height */
-    .intro, .services, .service-item, .booking, .contact, .hero {
-        height: 100vh; /* Full viewport height */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .hero-content {
-        text-align: center;
-        padding: 20px;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-
-    .service-item {
-        width: 90%;
-        height: 90%; /* Make each service item occupy most of the viewport height */
-        margin: 0 auto;
-    }
-
-    .contact form {
-        width: 90%;
-        height: 90%; /* Make the contact form occupy most of the viewport height */
-    }
-
-    .contact-details {
-        margin-top: 20px;
     }
 }
