@@ -292,3 +292,96 @@ input.error, select.error, textarea.error {
         font-size: 16px; /* Further adjustment for very small screens */
     }
 }
+/* Contact Section */
+.contact {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    border-color: #f0c14b;
+    box-shadow: 0 0 5px rgba(240, 193, 75, 0.5);
+    outline: none;
+}
+
+.contact form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #f0c14b;
+    color: #000;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact form button:hover {
+    background-color: #e6b31e;
+}
+
+.contact-details {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+
+.contact-details .social-media img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact form {
+        padding: 20px 10px;
+        border-radius: 5px;
+    }
+
+    .contact form input,
+    .contact form textarea {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .contact form button {
+        padding: 10px;
+    }
+}
