@@ -219,80 +219,6 @@ input.error, select.error, textarea.error {
     background-color: #f44336;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header-logo {
-        margin-bottom: 10px;
-        font-size: 20px; /* Adjust font size for smaller screens */
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav li {
-        margin: 10px 0;
-    }
-
-    .hero-content {
-        text-align: center;
-        padding: 20px;
-    }
-
-    .service-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-item {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-
-    .booking {
-        padding: 20px;
-    }
-
-    .testimonial-item {
-        padding: 20px;
-    }
-
-    .contact-details {
-        padding: 20px;
-    }
-
-    .social-media {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 1.5em;
-    }
-
-    .service-item img {
-        width: 100%;
-        height: auto;
-    }
-
-    .button {
-        padding: 10px;
-        font-size: 0.9em;
-    }
-
-    .header-logo {
-        font-size: 16px; /* Further adjustment for very small screens */
-    }
-}
-
 /* Contact Section */
 .contact {
     background-color: #f9f9f9;
@@ -371,18 +297,107 @@ input.error, select.error, textarea.error {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .contact form {
-        padding: 20px 10px;
-        border-radius: 5px;
+    header {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .contact form input,
-    .contact form textarea {
+    .header-logo {
+        margin-bottom: 10px;
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .booking {
+        padding: 20px;
+    }
+
+    .testimonial-item {
+        padding: 20px;
+    }
+
+    .contact-details {
+        padding: 20px;
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5em;
+    }
+
+    .service-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .button {
         padding: 10px;
         font-size: 0.9em;
     }
 
-    .contact form button {
-        padding: 10px;
+    .header-logo {
+        font-size: 16px; /* Further adjustment for very small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Each section will take the full viewport height */
+    .intro, .services, .service-item, .booking, .contact, .hero {
+        height: 100vh; /* Full viewport height */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .service-item {
+        width: 90%;
+        height: 90%; /* Make each service item occupy most of the viewport height */
+        margin: 0 auto;
+    }
+
+    .contact form {
+        width: 90%;
+        height: 90%; /* Make the contact form occupy most of the viewport height */
+    }
+
+    .contact-details {
+        margin-top: 20px;
     }
 }
