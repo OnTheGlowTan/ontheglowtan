@@ -8,7 +8,7 @@ body, html {
 header {
     position: fixed;
     width: 100%;
-    background-color: transparent; /* Make the header background transparent */
+    background-color: #ffe4b3; /* Make the header background transparent */
     z-index: 1000;
 }
 
