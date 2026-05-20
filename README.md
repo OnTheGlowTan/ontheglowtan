@@ -15,7 +15,7 @@ Welcome to the On The Glow Tan website repository! This project is designed to p
 
 ## Introduction
 
-On The Glow Tan offers organic mobile spray tanning services. This website provides an overview of the services offered, allows customers to book appointments, and includes contact information for inquiries.
+On The Glow Tan offers mobile spray tanning services. This website provides an overview of the services offered, allows customers to book appointments, and includes contact information for inquiries.
 
 ## Features
 
